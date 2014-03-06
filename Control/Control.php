@@ -3,9 +3,11 @@
 abstract class Control
 {
     protected $data;
+    protected $error;
     
     public function __construct() {
-        $data = array();
+        $this->data = array();
+        $this->error = array();
     }
     
     public function loadView($view) {

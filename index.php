@@ -1,6 +1,8 @@
 <?php
 
-include 'urlParse.php';
+session_start();
+
+require_once 'urlParse.php';
 
 $urlparse = new urlParse();
 
@@ -17,6 +19,12 @@ if(file_exists($linkFileController))
     include $linkFileController;
     $Control = new $controllerName;
     $Function = $Control->$actionName();
+}
+else if(empty($controllerName))
+{
+    include 'Control/Universities.php';
+    $Control = new Universities();
+    $Function = $Control->searchMap();
 }
 else
 {
