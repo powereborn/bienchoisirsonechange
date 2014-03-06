@@ -14,6 +14,8 @@ $urlparse->getLoadDetails($controllerName, $actionName);
 
 $linkFileController = 'Control/' . $controllerName . '.php';
 
+include 'View/header.phtml';
+
 if(file_exists($linkFileController))
 {
     include $linkFileController;
@@ -31,4 +33,4 @@ else
     echo "Oups";
 }
 
-
+include 'View/bottom.phtml';

@@ -16,11 +16,12 @@ body
     min-height: 500px;
 }
 
+/***************** Header ****************/
 #header
 {
     width: 100%;
     height: 75px;
-    background: #6fa8dc;
+    background: url('../images/header-background.png') repeat-x;
 }
 
 #logo
@@ -29,7 +30,63 @@ body
     margin-top: 11px;
 }
 
-.button {
+#button_subscribe
+{
+    position: absolute;
+    top: 15px;
+    right: 125px;
+}
+
+#button_connexion
+{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.fleche-block-header
+{
+    position: absolute;
+    top:-24px;
+    right: 0;
+}
+
+#content_subscribe
+{
+    background: white;
+    border: 1px solid #778088;
+    width: 250px;
+    height: auto;
+    position: absolute;
+    top: 80px;
+    right: 125px;
+    z-index: 10;
+    display: none;
+    text-align: center;
+    padding: 5px;
+}
+
+#content_connexion
+{
+    background: white;
+    border: 1px solid #778088;
+    width: 250px;
+    height: auto;
+    position: absolute;
+    top: 80px;
+    right: 15px;
+    z-index: 10;
+    display: none;
+    text-align: center;
+    padding: 5px;
+}
+
+#content_subscribe input, #content_connexion input
+{
+    width: 200px;
+}
+
+.button-header {
 	-moz-box-shadow:inset 0px 1px 0px 0px #bee2f9;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #bee2f9;
 	box-shadow:inset 0px 1px 0px 0px #bee2f9;
@@ -64,23 +121,9 @@ body
 	text-align:center;
 	text-shadow:1px 1px 0px #7cacde;
 }
-.button:hover {
+.button-header:hover,.buttonselected {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #468ccf), color-stop(1, #63b8ee) );
 	background:-moz-linear-gradient( center top, #468ccf 5%, #63b8ee 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf', endColorstr='#63b8ee');
 	background-color:#468ccf;
-}
-
-#button_subscribe
-{
-    position: absolute;
-    top: 15px;
-    right: 125px;
-}
-
-#button_connexion
-{
-    position: absolute;
-    top: 15px;
-    right: 15px;
 }

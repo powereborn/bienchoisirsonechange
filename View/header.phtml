@@ -1,8 +1,63 @@
-<?php
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>JQVMap - World Map</title>
+    
+    <link href="View/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="View/css/form.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="View/css/button.css" media="screen" rel="stylesheet" type="text/css" />
+    
+    <link href="utils/js/jqvmap/jqvmap.css" media="screen" rel="stylesheet" type="text/css" />
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    
+    <script src="utils/js/jqvmap/jquery.vmap.js" type="text/javascript"></script>
+    <script src="utils/js/jqvmap/maps/jquery.vmap.world.js" type="text/javascript"></script>
+    <script src="utils/js/jqvmap/data/jquery.vmap.sampledata.js" type="text/javascript"></script>
+        
+    <script src="utils/js/connexion.js" type="text/javascript"></script>
+    <script src="utils/js/subscribe.js" type="text/javascript"></script>
+    <script src="utils/js/map.js" type="text/javascript"></script>
+    
+  </head>
+  <body>
+      <div id="global">
+          <div id="header">
+              <img id="logo" src="View/images/logo.png" alt="logo" />
+              <a id="button_subscribe" class="button-header" href="#">Inscription</a>
+              <a id="button_connexion" class="button-header" href="#">Connexion</a>
+              
+              <div id="content_subscribe" class="form form-aligned">
+                  <img class="fleche-block-header" src="View/images/fleche-block-header.png" alt="fleche" />
+                  <fieldset>
+                    <legend>Inscription</legend>
+                    <div class="pure-control-group">
+                        <input class="input" type="text" id="input_username" placeholder="Login utc" />
+                    </div>
+                    <div class="pure-control-group">
+                        <input class="input" type="text" id="input_pseudonyme" placeholder="Pseudonyme" />
+                    </div>
+                    <div class="pure-control-group">
+                        <input class="input" type="password" id="input_password" placeholder="Mot de passe" />
+                    </div>
+                    <div class="pure-control-group">
+                        <input class="input" type="password" id="input_passwordConfirmed" placeholder="Confirmation du mot de passe" />
+                    </div>
+                    <button class="button">S'inscrire</button>
+                  </fieldset>
+              </div>
+              <div id="content_connexion" class="form form-aligned">
+                  <img class="fleche-block-header" src="View/images/fleche-block-header.png" alt="fleche" />
+                  <fieldset>
+                    <legend>Connexion</legend>
+                    <div class="pure-control-group">
+                        <input class="input" type="text" id="input_username" placeholder="Login" />
+                    </div>
+                    <div class="pure-control-group">
+                        <input class="input" type="password" id="input_password" placeholder="Mot de passe" />
+                    </div>
+                    <button class="button button-primary">Se connecter</button>
+                  </fieldset>
+              </div>
+          </div>
