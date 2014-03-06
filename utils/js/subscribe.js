@@ -3,7 +3,10 @@ $(document).ready(function() {
     
     $("#button_subscribe").live('click', function(event) {
         if($("#content_subscribe").css("display") === "block")
+        {
+            $("#button_subscribe").removeClass("buttonselected");
             $("#content_subscribe").css({"display":"none"});
+        }
         else
         {
             event.stopPropagation();
@@ -17,7 +20,7 @@ $(document).ready(function() {
     $("html").live('click', function(e) {
         
         hasParent = false;
-        for(var node = event.target; node !== document.body; node = node.parentNode)
+        for(var node = e.target; node !== document.body; node = node.parentNode)
         {
           if(node.id === 'content_subscribe'){
             hasParent = true; 

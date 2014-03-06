@@ -3,7 +3,10 @@ $(document).ready(function() {
     
     $("#button_connexion").live('click', function(event) {
         if($("#content_connexion").css("display") === "block")
+        {
+            $("#button_connexion").removeClass("buttonselected");
             $("#content_connexion").css({"display":"none"});
+        }
         else
         {
             event.stopPropagation();
@@ -16,7 +19,8 @@ $(document).ready(function() {
     
     $("html").live('click', function(e) {
         
-        for(var node = event.target; node != document.body; node = node.parentNode)
+        hasParent = false;
+        for(var node = e.target; node !== document.body; node = node.parentNode)
         {
           if(node.id === 'content_connexion'){
             hasParent = true;
