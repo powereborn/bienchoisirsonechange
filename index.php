@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once 'urlParse.php';
+require_once 'utils/urlParse.php';
 
 $urlparse = new urlParse();
 
@@ -14,7 +14,8 @@ $urlparse->getLoadDetails($controllerName, $actionName);
 
 $linkFileController = 'Control/' . $controllerName . '.php';
 
-include 'View/header.phtml';
+if($controllerName != "ajax")
+    include 'View/header.phtml';
 
 if(file_exists($linkFileController))
 {
@@ -33,4 +34,5 @@ else
     echo "Oups";
 }
 
-include 'View/bottom.phtml';
+if($controllerName != "ajax")
+    include 'View/bottom.phtml';

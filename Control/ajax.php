@@ -8,11 +8,7 @@ class Ajax extends Control
 {
     function displayTest() 
     {
-        include 'Model/Ajax/displayTest.php';
-        
-        $ModelDisplayTest = new ModelDisplayTest();
-        
-        $this->data = $ModelDisplayTest->displayTest();
+        $this->data = $this->loadModel("ModelDisplayTest","displayTest");
         
         $this->loadView("displayTest");
     }
@@ -25,7 +21,7 @@ class Ajax extends Control
     
     function subscribe()
     {
-        
+        echo json_encode($this->loadModel("ModelMember","subscribe"));
     }
     
     /** Update des listes déroulantes des listes des pays et des listes des universités **/

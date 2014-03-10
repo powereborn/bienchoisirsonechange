@@ -1,4 +1,26 @@
 
+function connect()
+{
+    var param = "login="
+            + $("input#input_login").val()
+            + "&pseudonyme="
+            + $("input#input_pseudonyme").val()
+            + "&password="
+            + $("input#input_password").val()
+            + "&password_confirmed="
+            + $("input#input_passwordConfirmed").val();
+    $.ajax({
+        type: 'POST',
+        url: '/ajax/subscribe',
+        data: param,
+        success:
+            function(result) 
+            {
+                alert(result);
+            }
+    });
+}
+
 $(document).ready(function() {
     
     $("#button_subscribe").live('click', function(event) {
@@ -33,6 +55,10 @@ $(document).ready(function() {
             $("#button_subscribe").removeClass("buttonselected");
             $("#content_subscribe").css({"display":"none"});
         }
+    });
+    
+    $("#content_subscribe button").live('click', function() {
+       connect(); 
     });
     
 });
