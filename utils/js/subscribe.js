@@ -1,14 +1,14 @@
 
-function connect()
+function subscribe()
 {
     var param = "login="
-            + $("input#input_login").val()
+            + $("input#input_subscribe_login").val()
             + "&pseudonyme="
-            + $("input#input_pseudonyme").val()
+            + $("input#input_subscribe_pseudonyme").val()
             + "&password="
-            + $("input#input_password").val()
+            + $("input#input_subscribe_password").val()
             + "&password_confirmed="
-            + $("input#input_passwordConfirmed").val();
+            + $("input#input_subscribe_passwordConfirmed").val();
     $.ajax({
         type: 'POST',
         url: '/ajax/subscribe',
@@ -58,7 +58,7 @@ $(document).ready(function() {
     });
     
     $("#content_subscribe button").live('click', function() {
-       connect(); 
+       subscribe(); 
     });
     
 });

@@ -27,5 +27,19 @@ class Member extends Control
     {
         
     }
+    
+    public function confirm()
+    { 
+        $this->data = $this->loadModel("ModelMember","confirmSubscribe");
+        
+        $this->loadView("confirm_subscribe");
+    }
+    
+    public function cancel()
+    {
+        $this->data = $this->loadModel("ModelMember","cancelSubscribe");
+        
+        $this->loadView("cancel_subscribe");
+    }
 }
 

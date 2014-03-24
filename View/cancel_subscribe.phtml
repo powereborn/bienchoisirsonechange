@@ -1,0 +1,17 @@
+<div class="block-content">
+    <h2>Accueil : Annulation de l'action du compte</h2>
+    <?php
+        if(count($this->data['error']) > 0)
+        {
+            echo "Erreur : ";
+            foreach($this->data['error'] as $val)
+            {
+                echo $val;
+            }
+        }
+        else if(!empty($this->data['ok']))
+        {
+            echo $this->data['ok']['confirm'];
+        }
+    ?>
+</div>

@@ -1,5 +1,7 @@
 <?php
 
+$session_expiration = time() + 3600 * 24 * 2; // +2 days
+session_set_cookie_params($session_expiration);
 session_start();
 
 require_once 'utils/urlParse.php';

@@ -1,4 +1,23 @@
 
+function connect()
+{
+    var param = "login="
+            + $("input#input_connexion_login").val()
+            + "&password="
+            + $("input#input_connexion_password").val();
+    
+    $.ajax({
+        type: 'POST',
+        url: '/ajax/connexion',
+        data: param,
+        success:
+            function(result) 
+            {
+                alert(result);
+            }
+    });
+}
+
 $(document).ready(function() {
     
     $("#button_connexion").live('click', function(event) {
@@ -33,6 +52,10 @@ $(document).ready(function() {
             $("#button_connexion").removeClass("buttonselected");
             $("#content_connexion").css({"display":"none"});
         }
+     });
+     
+     $("#content_connexion button").live('click', function() {
+         connect();
      });
     
 });

@@ -16,7 +16,7 @@ class Ajax extends Control
     /** Se connecter et s'inscrire **/
     function connexion()
     {
-        
+        echo json_encode($this->loadModel("ModelMember","connexion"));
     }
     
     function subscribe()

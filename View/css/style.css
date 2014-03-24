@@ -127,3 +127,28 @@ body
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf', endColorstr='#63b8ee');
 	background-color:#468ccf;
 }
+
+/** Block content */
+
+.block-content
+{
+    background: white;
+    border-radius: 4px;
+    border: 1px solid #778088;
+    position: relative;
+    margin: 0 auto;
+    overflow: auto;
+    width: auto;
+    height: auto;
+    min-height: 500px;
+    padding: 15px;
+    margin: 15px;
+}
+
+.block-content h2
+{
+    margin-top: 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ededed;
+    color: #262626;
+}
